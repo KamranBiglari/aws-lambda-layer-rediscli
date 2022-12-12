@@ -22,7 +22,7 @@ RUN curl https://download.redis.io/redis-stable.tar.gz -o redis-stable.tar.gz
 RUN tar -xzvf redis-stable.tar.gz 
 RUN cd redis-stable/ && make  \
     && make install
-    
+
 # organize for self-contained usage
 
 RUN mv  $(eval which redis-cli)  /opt/rediscli
@@ -39,5 +39,6 @@ RUN cd /opt \
     && echo "/layer.zip is ready" \
     && ls -alh /layer.zip;
 
+RUN /opt/rediscli --version
 WORKDIR /
 ENTRYPOINT [ "/bin/bash" ]
