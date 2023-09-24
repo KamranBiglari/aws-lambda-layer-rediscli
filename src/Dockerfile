@@ -1,5 +1,4 @@
 FROM public.ecr.aws/lambda/provided:latest
-
 #
 # versions
 #
@@ -41,4 +40,4 @@ RUN cd /opt \
 
 RUN /opt/rediscli --version
 WORKDIR /
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT ["/bin/bash"]
