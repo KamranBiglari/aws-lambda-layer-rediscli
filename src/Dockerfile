@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/provided:latest
+FROM public.ecr.aws/lambda/provided:al2
 #
 # versions
 #
